@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Pensions Dashboard Connection Deadline Tool
@@ -14,28 +14,27 @@
         <span class="govuk-caption-xl">GOV.UK Prototype Kit {{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+        Rough prototypes of the tool. There are currently two versions: one using radios for the first question (recommended for accessibility purposes) and one using the select component for the first question.
       </p>
 
       <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
+        They're responsive, but they've been designed in a one-third column to simulate their likely placement in the right-hand column.
       </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      {{ govukInsetText({
+        text: "This is NOT production-ready code. It is for prototype purposes only."
+      }) }}
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <h2 class="govuk-heading-m">Versions</h2>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
+          <a href="/check-your-connection-deadline-RADIOS">v001-R with radios for first question</a>
         </li>
         <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          <a href="/check-your-connection-deadline-SELECT">v001-S with selector for first question</a>
         </li>
       </ul>
     </div>
