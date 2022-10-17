@@ -253,7 +253,36 @@ button, .govuk-button {
   
   /* ================ END Button Styles ================ */
 
+  /* ================ START Link Styles ================ */
+
+  a:link {
+    color: #006EBC; /* Royal blue */
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+  
+  a:hover {
+    color: #557B97; /* Kashmir blue */
+    /* font-weight: 700; */
+    text-decoration-thickness: 3px;
+  }
+  
+  a:focus {
+    background-color: #fed100; /* Tangerine yellow */
+    border-bottom: 4px solid #3d3d3d;
+    color: #3d3d3d !important; /* Eclipse */
+    text-decoration: none !important;
+  }
+  
+  a:visited {
+    color: #483b8b; /* Violet */
+  }
+
+  /* ================ END Link Styles ================ */
+
   /* ================ START Panel Styles ================ */
+
   .govuk-panel {
     margin-bottom: 15px;
     padding: 36px 10px;
@@ -263,3 +292,13 @@ button, .govuk-button {
 .govuk-panel--confirmation {
     background: #1E7E34 !important;
 }
+
+  /* ================ END Panel Styles ================ */
+
+  /* ================ START Inset Text Styles ================ */
+
+  .govuk-inset-text {
+    font-weight: 600 !important;
+}
+
+  /* ================ END Inset Text Styles ================ */
