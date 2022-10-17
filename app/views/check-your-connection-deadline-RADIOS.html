@@ -1,0 +1,174 @@
+{% extends "layout_unbranded.html" %}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+
+{% block pageTitle %}
+  Check your connection deadline – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <h2 class="govuk-heading-m">
+        Check your connection deadline
+      </h2>
+
+      <p class="govuk-body">
+        This tool is only for trustees or scheme managers of registrable occupational pension schemes with 100 or more active and / or deferred members and non-registrable public service pension schemes, unless the scheme’s main administration is outside Great Britain.
+      </p>
+
+      <p class="govuk-body">
+        If you have more than one type of scheme, you'll need to run this tool for each type.
+      </p>
+
+      <form action="/your-connection-deadline-RADIOS" method="post" novalidate>
+
+        {{ govukRadios({
+          name: "scheme-type",
+          fieldset: {
+            legend: {
+              text: "What kind of scheme do you have?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "master-trust",
+              text: "Master Trust"
+            },
+            {
+              value: "dc-scheme-used-for-automatic-enrolment",
+              text: "DC scheme used for automatic enrolment"
+            },
+            {
+              value: "cdc-scheme",
+              text: "CDC scheme"
+            },
+            {
+              value: "db-scheme",
+              text: "DB scheme"
+            },
+            {
+              value: "hybrid-scheme-including-master-trusts-and-hybrid-cdcs",
+              text: "Hybrid scheme including Master Trusts and hybrid CDCs"
+            },
+            {
+              value: "other-dc-scheme",
+              text: "Other DC scheme"
+            },
+            {
+              value: "public-service-pension-scheme",
+              text: "Public service pension scheme"
+            },
+            {
+              value: "scheme-for-members-of-the-uk-or-welsh-parliaments",
+              text: "Scheme for members of the UK or Welsh Parliaments"
+            }
+          ]
+        }) }}
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "subject",
+          name: "subject",
+          label: {
+            text: "How many active and deferred members did you have at scheme year end between 1 April 2020 and 31 March 2021?",
+            classes: "govuk-label--s"
+          },
+            hint: {
+            text: "Do not include pensioner members in your count."
+          },
+          items: [
+            {
+              value: "select",
+              text: "Select",
+              selected: true
+            },
+            {
+              value: "over-20,000",
+              text: "Over 20,000"
+            },
+            {
+              value: "10,000-19,999",
+              text: "10,000 – 19,999"
+            },
+            {
+              value: "5,000-9,999",
+              text: "5,000 – 9,999"
+            },
+            {
+              value: "2,500-4,999",
+              text: "2,500 – 4,999"
+            },
+            {
+              value: "1,500-2,499",
+              text: "1,500 – 2,499"
+            },
+            {
+              value: "1,000-1,499",
+              text: "1,000 – 1,499"
+            },
+            {
+              value: "850-999",
+              text: "850 – 999"
+            },
+            {
+              value: "750-849",
+              text: "750 – 849"
+            },
+            {
+              value: "600-749",
+              text: "600 – 749"
+            },
+            {
+              value: "500-599",
+              text: "500 – 599"
+            },
+            {
+              value: "400-499",
+              text: "400 – 499"
+            },
+            {
+              value: "320-399",
+              text: "320 – 399"
+            },
+            {
+              value: "250-319",
+              text: "250 – 319"
+            },
+            {
+              value: "195-249",
+              text: "195 – 249"
+            },
+            {
+              value: "155-194",
+              text: "155 – 194"
+            },
+            {
+              value: "125-154",
+              text: "125 – 154"
+            },
+            {
+              value: "100-124",
+              text: "100 – 124"
+            }
+          ]
+
+        }) }}
+
+        {{ govukButton({
+          text: "Calculate connection deadline"
+        }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

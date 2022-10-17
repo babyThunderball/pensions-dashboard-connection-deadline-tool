@@ -1,0 +1,265 @@
+// The unbranded stylesheet is used if you need to create pages in your
+// prototype without the GOV.UK branding.
+//
+// See localhost:3000/docs/templates/blank-unbranded
+
+// Import settings first so we can override them before importing all of GOV.UK Frontend
+// If you need to enable compatibility mode or the legacy palette, do that *before* this import.
+@import "node_modules/govuk-frontend/govuk/settings/all";
+
+// Override the default GOV.UK Frontend font stack
+$govuk-font-family: "OpenSans", "Open Sans", sans-serif;
+
+// Override the canvas background colour, which is normally grey to blend with the GOV.UK footer.
+$govuk-canvas-background-colour: $govuk-body-background-colour;
+
+@import "application";
+
+//START TPR Styles
+
+/* ================ TABLE OF CONTENTS ================
+1. Global styles
+2. Link Styles
+etc.
+
+================ END TABLE OF CONTENTS ================ */
+
+
+/* ================ 1. GLOBAL STYLES ================ */
+
+html {
+    box-sizing: border-box;
+  }
+  
+  * {
+    vertical-align: middle;
+  }
+  
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body, .govuk-body {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0em !important;
+    line-height: 68px !important;
+  }
+  
+  h2, .govuk-label--m {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0em !important;
+    line-height: 36px !important;
+  }
+  
+  h3, .govuk-fieldset__legend--m, .govuk-label--s {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0em !important;
+    line-height: 28px !important;
+    padding-top: 20px !important;
+  }
+  
+  h4 {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+  }
+  
+  h5 {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+  }
+  
+  p {
+    color: #3d3d3d;/* Eclipse */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0em !important;
+    line-height: 24px !important;
+  }
+  
+  label {
+    color: #3d3d3d !important;/* Eclipse */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px !important;
+    font-weight: 600;
+    letter-spacing: 0em !important;
+    line-height: 1.5 !important;
+  }
+  
+  
+  li {
+    color: #3d3d3d;/* Eclipse */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0em !important;
+  }
+
+  .govuk-hint {
+    color: #585858;/* Zambezi */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px !important;
+    font-weight: 400;
+    letter-spacing: 0em !important;
+    line-height: 1.5 !important;
+  }
+
+  .govuk-select {
+    color: #3d3d3d !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0em !important;
+    line-height: 28px !important;
+  }
+
+  .govuk-heading-xl, .govuk-label--xl {
+    border-bottom: 1px solid #cacaca;
+    margin-bottom: 30px !important;
+    padding-bottom: .75em;
+    width: 100%;
+}
+
+.govuk-panel__body {
+    color: #ffffff !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0em !important;
+    line-height: 52px !important;
+    margin-bottom: 16px;
+}
+
+.govuk-panel__title {
+    color: #ffffff !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0em !important;
+    line-height: 40px !important;
+    margin-bottom: 10px;
+}
+
+.govuk-grid-column-one-third {
+    padding: 0 !important;
+}
+
+.govuk-grid-row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.govuk-width-container {
+    max-width: 1050px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @supports (margin: max(calc(0px))) {
+    .govuk-width-container {
+      margin-right: max(20px, calc(20px + env(safe-area-inset-right)));
+      margin-left: max(20px, calc(20px + env(safe-area-inset-left)));
+    }
+  }
+  @media (min-width: 40.0625em) {
+    .govuk-width-container {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    @supports (margin: max(calc(0px))) {
+      .govuk-width-container {
+        margin-right: max(30px, calc(15px + env(safe-area-inset-right)));
+        margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
+      }
+    }
+  }
+  @media (min-width: 1020px) {
+    .govuk-width-container {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @supports (margin: max(calc(0px))) {
+      .govuk-width-container {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+  
+  /* ================ END Global Styles ================ */
+
+  /* ================ XX. BUTTON STYLES ================ */
+
+button, .govuk-button {
+    background-color: #0381a2; /* Eastern blue */
+    border: none;
+    border-radius: 8px;
+    box-shadow: none !important;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 27px; /* padding: 5px 20px; */
+    margin: 30px 0px 30px 0px; /* margin: 0 auto; */
+    text-align: center;
+    transition-duration: 0.2s;
+    /* width: 200px; */
+  }
+  
+  button:hover, .govuk-button:hover {
+    background-color: #483b8b; /* Violet */
+  }
+  
+  button:active,
+  button:focus,
+  .govuk-button:active,
+  .govuk-button:focus {
+    background-color: #fed100; /* Tangerine yellow */
+    color: #3d3d3d;/* Eclipse */
+    border-bottom: 2px solid #3d3d3d;
+  }
+  
+  button.secondary-btn {
+    background-color: #006ebc; /* Royal blue */
+  }
+
+@media (min-width: 40.0625em) {
+    .govuk-button {
+        width: 350px;
+    }
+}
+  
+  /* ================ END Button Styles ================ */
+
+  /* ================ START Panel Styles ================ */
+  .govuk-panel {
+    margin-bottom: 15px;
+    padding: 36px 10px;
+    border: none;
+}
+
+.govuk-panel--confirmation {
+    background: #1E7E34 !important;
+}
