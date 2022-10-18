@@ -29,6 +29,7 @@ etc.
 
 html {
     box-sizing: border-box;
+    scroll-padding-top: 50px;
   }
   
   * {
@@ -207,6 +208,12 @@ html {
       }
     }
   }
+
+  .tool-container {
+    border: 4px solid #cacaca;
+    padding: 4.5% 5.5% 1.5% 5.5%;
+    margin-bottom: 36px;
+}
   
   /* ================ END Global Styles ================ */
 
@@ -372,7 +379,9 @@ button, .govuk-button {
     text-decoration: underline;
 }
 
-  /* ================ END Breadcrumb Styles ================ */
+/* ================ END Breadcrumb Styles ================ */
+
+/* ================ START List Styles ================ */
 
   .govuk-list--number {
     -webkit-column-count: 2;
@@ -382,12 +391,4 @@ button, .govuk-button {
     padding-bottom: 28px;
 }
 
-.tool-container {
-    border: 4px solid #cacaca;
-    padding: 4.5% 5.5% 1.5% 5.5%;
-    margin-bottom: 36px;
-}
-
-html {
-    scroll-padding-top: 50px;
-}
+/* ================ END List Styles ================ */
