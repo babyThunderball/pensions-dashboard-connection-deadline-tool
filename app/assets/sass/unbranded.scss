@@ -373,3 +373,16 @@ button, .govuk-button {
 }
 
   /* ================ END Breadcrumb Styles ================ */
+
+  .govuk-list--number {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 28px;
+}
+
+.tool-container {
+    background-color: #ededed;
+    display: inline-block;
+}
