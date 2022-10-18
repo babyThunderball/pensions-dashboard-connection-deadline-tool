@@ -77,8 +77,8 @@
         {% from "govuk/components/select/macro.njk" import govukSelect %}
 
         {{ govukSelect({
-          id: "subject",
-          name: "subject",
+          id: "membership-bands-radios",
+          name: "membership-band",
           label: {
             text: "How many active and deferred members did you have at scheme year end between 1 April 2020 and 31 March 2021?",
             classes: "govuk-label--s"
@@ -88,8 +88,8 @@
           },
           items: [
             {
-              value: "select",
-              text: "Select",
+              value: "select-membership-band",
+              text: "Select membership band",
               selected: true
             },
             {
