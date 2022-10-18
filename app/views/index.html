@@ -5,6 +5,16 @@
   Pensions Dashboard Connection Deadline Tool
 {% endblock %}
 
+{% block header %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -31,6 +41,12 @@
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
+          <a href="/v002-Radios/check-your-connection-deadline-RADIOS">v002-R with radios for first question</a>
+        </li>
+        <li>
+          <a href="/v002-Select/check-your-connection-deadline-SELECT">v002-S with selector for first question</a>
+        </li>
+        <li>
           <a href="/v001-Radios/check-your-connection-deadline-RADIOS">v001-R with radios for first question</a>
         </li>
         <li>
@@ -39,5 +55,13 @@
       </ul>
     </div>
   </div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({}) }}
 
 {% endblock %}
