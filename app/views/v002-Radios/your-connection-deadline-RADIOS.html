@@ -3,7 +3,7 @@
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
   {% from "govuk/components/button/macro.njk" import govukButton %}
-
+  {% set mainClasses = "govuk-main-wrapper--l" %}
 
 
 
@@ -100,26 +100,25 @@
       <p class="govuk-body">Your connection deadline will not change if your scheme changes size, unless you fall out of scope of the requirements entirely, for example if all your members become pensioner members.
       </p>
 
-      <h2 id="your-connection-deadline-radios-2" class="govuk-heading-m">
-        Check your connection deadline
-      </h2>
+      <div class="tool-container">
+        <h2 id="your-connection-deadline-radios-2" class="govuk-heading-m">
+          Check your connection deadline
+        </h2>
 
-      {% set mainClasses = "govuk-main-wrapper--l" %}
+        {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
-      {% from "govuk/components/panel/macro.njk" import govukPanel %}
-
-
-      {{ govukPanel({
-        titleText: "Based on this, your connection deadline is",
-        html: "<strong>31 October 2023</strong>"
-      }) }}
-
-      <form action="/v002-Radios/check-your-connection-deadline-RADIOS#check-your-connection-deadline-radios-2" method="post" novalidate>
-
-        {{ govukButton({
-          text: "Check another scheme's deadline"
+        {{ govukPanel({
+          titleText: "Based on this, your connection deadline is",
+          html: "<strong>31 October 2023</strong>"
         }) }}
-      </form>
+
+        <form action="/v002-Radios/check-your-connection-deadline-RADIOS#check-your-connection-deadline-radios-2" method="post" novalidate>
+
+          {{ govukButton({
+            text: "Check another scheme's deadline"
+          }) }}
+        </form>
+      </div>
 
       <h2 class="govuk-heading-m">
         Connection deadlines
