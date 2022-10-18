@@ -163,7 +163,7 @@ html {
     margin-bottom: 10px;
 }
 
-.govuk-grid-column-one-third {
+.govuk-grid-column-one-third, .govuk-grid-column-two-thirds {
     padding: 0 !important;
 }
 
@@ -245,9 +245,9 @@ button, .govuk-button {
     background-color: #006ebc; /* Royal blue */
   }
 
-@media (min-width: 40.0625em) {
+@media only screen and (max-width: 360px) {
     .govuk-button {
-        width: 350px;
+        width: 320px;
     }
 }
   
@@ -283,7 +283,7 @@ button, .govuk-button {
 
   /* ================ START Panel Styles ================ */
 
-  .govuk-panel {
+.govuk-panel {
     margin-bottom: 15px;
     padding: 36px 10px;
     border: none;
@@ -297,8 +297,79 @@ button, .govuk-button {
 
   /* ================ START Inset Text Styles ================ */
 
-  .govuk-inset-text {
+.govuk-inset-text {
     font-weight: 600 !important;
 }
 
   /* ================ END Inset Text Styles ================ */
+
+  /* ================ START Table Styles ================ */
+
+.govuk-table__header {
+    background-color: #ededed;
+    font-weight: 700;
+}
+
+.govuk-table__cell, .govuk-table__header {
+    font-size: 16px;
+    padding: 20px;
+}
+
+.govuk-table__caption--m {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+  /* ================ END Table Styles ================ */
+
+  /* ================ START Header Styles ================ */
+
+
+.govuk-header {
+    border-bottom: 50px solid #0B0030;
+    background: #483B8B;
+}
+
+.govuk-header__container {
+    padding: 57px;
+    border-bottom: none !important;
+}
+
+.govuk-header__link:link, .govuk-header__link:visited {
+    display: none;
+}
+
+/* ================ END Header Styles ================ */
+
+/* ================ START Footer Styles ================ */
+
+.govuk-footer {
+    background-color: #ededed;
+    padding: 150px;
+}
+
+.govuk-footer__licence-description, .govuk-footer__licence-logo, .govuk-footer__copyright-logo {
+    display: none;
+}
+
+/* ================ END Footer Styles ================ */
+
+ /* ================ START Breadcrumb Styles ================ */
+
+ .govuk-breadcrumbs {
+    border-bottom: 1px solid #cacaca;
+    margin-bottom: -30px;
+    padding: 0 0 10px 0;
+ }
+ 
+ .govuk-breadcrumbs__link:link, .govuk-breadcrumbs__link:visited {
+    color: #006EBC;
+    text-decoration: none;
+}
+
+.govuk-breadcrumbs__link:hover {
+    color: #557B97;
+    text-decoration: underline;
+}
+
+  /* ================ END Breadcrumb Styles ================ */
