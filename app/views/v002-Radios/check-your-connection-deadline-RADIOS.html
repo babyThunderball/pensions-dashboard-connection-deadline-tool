@@ -99,14 +99,14 @@
 
       <p class="govuk-body">Your connection deadline will not change if your scheme changes size, unless you fall out of scope of the requirements entirely, for example if all your members become pensioner members.
       </p>     
-      <div class="tool-container">
+      <section class="tool-container">
         <h2 id="check-your-connection-deadline-radios-2" class="govuk-heading-m">
           Check your connection deadline
         </h2>
 
-        <p class="govuk-body">
+        {# <p class="govuk-body">
           This tool is only for trustees or scheme managers of registrable occupational pension schemes with 100 or more active and / or deferred members and non-registrable public service pension schemes, unless the scheme’s main administration is outside Great Britain.
-        </p>
+        </p> #}
 
         <p class="govuk-body">
           If you have more than one type of scheme, you'll need to run this tool for each type.
@@ -137,16 +137,8 @@
                 text: "CDC scheme"
               },
               {
-                value: "db-scheme",
-                text: "DB scheme"
-              },
-              {
-                value: "hybrid-scheme-including-master-trusts-and-hybrid-cdcs",
-                text: "Hybrid scheme including Master Trusts and hybrid CDCs"
-              },
-              {
-                value: "other-dc-scheme",
-                text: "Other DC scheme"
+                value: "db-other-dc-hybrid-schemes",
+                text: "DB schemes, all other DC schemes and all hybrid schemes (including hybrid master trusts and hybrid CDCs)"
               },
               {
                 value: "public-service-pension-scheme",
@@ -253,7 +245,7 @@
             text: "Calculate connection deadline"
           }) }}
         </form>
-      </div>
+      </section>
 
 <h2 class="govuk-heading-m">
         Connection deadlines
