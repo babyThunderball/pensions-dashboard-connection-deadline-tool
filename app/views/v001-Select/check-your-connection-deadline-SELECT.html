@@ -27,7 +27,7 @@
         If you have more than one type of scheme, you'll need to run this tool for each type.
       </p>
 
-      <form action="/your-connection-deadline-SELECT" method="post" novalidate>
+      <form action="/v001-Select/your-connection-deadline-SELECT" method="post" novalidate>
 
         {% from "govuk/components/select/macro.njk" import govukSelect %}
 
@@ -85,7 +85,7 @@
         }) }}
 
         {{ govukSelect({
-          id: "membership-bands",
+          id: "membership-bands-select",
           name: "membership-bands",
           label: {
             text: "How many active and deferred members did you have at scheme year end between 1 April 2020 and 31 March 2021?",
