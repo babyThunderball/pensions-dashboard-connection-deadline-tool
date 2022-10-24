@@ -1,0 +1,436 @@
+{% extends "layout_unbranded.html" %}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  {% set mainClasses = "govuk-main-wrapper--l" %}
+
+
+
+{% block pageTitle %}
+  Check your connection deadline – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Trustees",
+      href: "#"
+    },
+    {
+      text: "Contributions, dashboards, data and transfers",
+      href: '#'
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-m">
+        Pensions dashboards: initial guidance
+      </h1>
+
+      <ol class="govuk-list govuk-list--number guidenavigation">
+        <li>
+          <a href="#">Overview</a>
+        </li>
+        <li>
+          <strong>When your scheme needs to connect with dashboards</strong>
+        </li>
+        <li>
+          <a href="#">Connecting to pensions dashboards</a>
+        </li>
+        <li>
+          <a href="#">Matching people with their pensions</a>
+        </li>
+        <li>
+          <a href="#">Information to provide to members</a>
+        </li>
+        <li>
+          <a href="#">Failing to comply with pensions dashboards duties</a>
+        </li>
+        <li>
+          <a href="#">Preparing to connect: checklist</a>
+        </li>
+        <li>
+          <a href="#">Stay in touch with developments</a>
+        </li>                                        
+      </ol>
+      
+      <h2 class="govuk-heading-m">
+        When your scheme needs to connect with dashboards
+      </h2>
+
+      <p class="govuk-body">
+        Pension schemes will connect to dashboards over time according to their size and type. The current proposed deadlines are set out below. Check the final regulations when they are published later this year to confirm your deadline.
+      </p>
+
+      <p class="govuk-body">
+        Your connection deadline is calculated based on the total number of active and deferred members across all sections of the scheme at the scheme year end that fell between 1 April 2020 and 31 March 2021. You should not include pensioner members in your count. If you did not have 100 or more active and deferred members at scheme year end 2020 to 2021, but you do now, see the section on ‘schemes newly in scope’ below.
+      </p>
+
+      <p class="govuk-body">
+        Your deadline applies to the whole scheme. If your scheme has multiple sections or your members have additional voluntary contributions (AVCs) in the scheme, these will all need to be connected by the same deadline. You will need to work with your administrators and AVC providers to ensure your whole scheme is connected.
+      </p>
+
+      <p class="govuk-body">Your connection deadline will not change if your scheme changes size, unless you fall out of scope of the requirements entirely, for example if all your members become pensioner members.
+      </p>
+
+      <div class="tool-container">
+        <h2 id="your-connection-deadline-select-2" class="govuk-heading-m">
+          Check your connection deadline
+        </h2>
+
+        {% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+        {{ govukPanel({
+          titleText: "Based on this, your connection deadline is",
+          html: "<strong>31 October 2023</strong>"
+        }) }}
+
+        <form action="/v002-Select/check-your-connection-deadline-SELECT#check-your-connection-deadline-select-2" method="post" novalidate>
+
+          {{ govukButton({
+            text: "Check another scheme's deadline"
+          }) }}
+        </form>
+      </div>
+
+      <h2 class="govuk-heading-m">
+        Connection deadlines
+      </h2>
+
+      {% from "govuk/components/table/macro.njk" import govukTable %}
+
+      {{ govukTable({
+        caption: "Master trusts",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "20,000 or more"
+            },
+            {
+              text: "31 August 2023"
+            }
+          ],
+          [
+            {
+              text: "10,000 to 19,999"
+            },
+            {
+              text: "30 September 2023"
+            }
+          ],
+          [
+            {
+              text: "5,000 to 9,999"
+            },
+            {
+              text: "31 October 2023"
+            }
+          ],
+          [
+            {
+              text: "2,500 to 4,999"
+            },
+            {
+              text: "31 January 2024"
+            }
+          ],
+          [
+            {
+              text: "1,000 to 2,499"
+            },
+            {
+              text: "29 February 2024"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukTable({
+        caption: "DC schemes used for automatic enrolment",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "20,000 or more"
+            },
+            {
+              text: "31 August 2023"
+            }
+          ],
+          [
+            {
+              text: "10,000 to 19,999"
+            },
+            {
+              text: "30 September 2023"
+            }
+          ],
+          [
+            {
+              text: "5,000 to 9,999"
+            },
+            {
+              text: "31 October 2023"
+            }
+          ],
+          [
+            {
+              text: "2,500 to 4,999"
+            },
+            {
+              text: "31 January 2024"
+            }
+          ],
+          [
+            {
+              text: "1,000 to 2,499"
+            },
+            {
+              text: "29 February 2024"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukTable({
+        caption: "CDC schemes",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "All sizes"
+            },
+            {
+              text: "30 April 2024"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukTable({
+        caption: "DB schemes, all other DC schemes and all hybrid schemes (including hybrid master trusts and hybrid CDCs)",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "20,000 or more"
+            },
+            {
+              text: "31 August 2023"
+            }
+          ],
+          [
+            {
+              text: "10,000 to 19,999"
+            },
+            {
+              text: "30 September 2023"
+            }
+          ],
+          [
+            {
+              text: "5,000 to 9,999"
+            },
+            {
+              text: "31 October 2023"
+            }
+          ],
+          [
+            {
+              text: "2,500 to 4,999"
+            },
+            {
+              text: "31 January 2024"
+            }
+          ],
+          [
+            {
+              text: "1,000 to 2,499"
+            },
+            {
+              text: "29 February 2024"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukTable({
+        caption: "Public service schemes",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "All sizes"
+            },
+            {
+              text: "30 September 2024"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukTable({
+        caption: "Schemes for members of the UK or Welsh Parliaments",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "1,000 or more"
+            },
+            {
+              text: "30 September 2024"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukTable({
+        caption: "Schemes with 100 to 999 relevant members",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Number of active and deferred members"
+          },
+          {
+            text: "Connection deadline"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "20,000 or more"
+            },
+            {
+              text: "31 August 2023"
+            }
+          ],
+          [
+            {
+              text: "10,000 to 19,999"
+            },
+            {
+              text: "30 September 2023"
+            }
+          ],
+          [
+            {
+              text: "5,000 to 9,999"
+            },
+            {
+              text: "31 October 2023"
+            }
+          ],
+          [
+            {
+              text: "2,500 to 4,999"
+            },
+            {
+              text: "31 January 2024"
+            }
+          ],
+          [
+            {
+              text: "1,000 to 2,499"
+            },
+            {
+              text: "29 February 2024"
+            }
+          ]
+        ]
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({}) }}
+
+{% endblock %}
