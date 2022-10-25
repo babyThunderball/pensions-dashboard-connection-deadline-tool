@@ -392,3 +392,61 @@ button, .govuk-button {
 }
 
 /* ================ END List Styles ================ */
+
+/* ================ START Back to Top Styles ================ */
+
+.app-back-to-top {
+    background-color: #ffffff;
+    border-top: 1px solid #cacaca;
+    height: 48px;
+    width: 100%;
+    margin-top: govuk-spacing(4);
+    margin-bottom: govuk-spacing(6);
+  }
+  
+//   @include govuk-media-query($from: tablet) {
+    .app-back-to-top {
+        display: none;
+      position: absolute;
+      bottom: 0;
+    //   left: 0;
+      margin-top: auto;
+      margin-bottom: govuk-spacing(8);
+      padding: 10px 0;
+      text-align: right;
+    }
+
+    @media (min-width: 40.0625em) {
+        .app-back-to-top__link {
+          margin-right: 22.65%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .app-back-to-top {
+          text-align: center;
+        }
+    }
+  
+    .js-enabled .app-back-to-top--fixed {
+      position: fixed;
+      top: calc(100% - #{govuk-spacing(8)});
+      bottom: auto;
+      left: 0;
+    }
+  
+    .js-enabled .app-back-to-top--hidden .app-back-to-top__link {
+      @include govuk-visually-hidden-focusable;
+    }
+//   }
+  
+  .app-back-to-top__icon {
+    display: inline-block;
+    width: .8em;
+    height: 1em;
+    margin-top: -(govuk-spacing(1));
+    margin-right: govuk-spacing(2);
+    vertical-align: middle;
+  }
+
+  /* ================ END Back to Top Styles ================ */
