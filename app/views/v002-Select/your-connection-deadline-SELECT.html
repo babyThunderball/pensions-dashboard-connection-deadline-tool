@@ -30,7 +30,7 @@
   items: [
     {
       text: "Home",
-      href: "#"
+      href: "/index.html"
     },
     {
       text: "Trustees",
@@ -119,6 +119,50 @@
           }) }}
         </form>
       </div>
+
+      <h2 class="govuk-heading-m">
+        Connecting earlier than your deadline
+      </h2>
+
+      <p>You can choose to connect earlier than your window. For instance, you may want your members to be able to find you on dashboards sooner, or it may make practical sense to do so (for example if you operate several schemes, and you want to connect them all at once). However, you must be able to find members and send them data as soon as you are connected.</p>
+
+      <p>You will need to apply to the Money and Pensions Service (MaPS). You can find out more in their draft guidance on early connection. Talk to your administrator or provider if you would like to connect early, and allow at least two months for the application process ahead of when you’d like to connect.</p>
+
+      <p>Small and micro occupational schemes can also apply for permission to connect on a voluntary basis.</p>
+
+      <h3 class="govuk-heading-s">
+        Deferring your deadline
+      </h3>
+
+      <p>You may be able to apply to the Department for Work and Pensions (DWP) for a one-off deferral to your connection deadline where you are in the process of changing administrator. You will need to do this within 12 months of the regulations coming into force and as early as possible to ensure your application can be considered in time, and in any case no later than two months before your connection deadline. You will need to demonstrate that it will be disproportionately burdensome or put the personal data of members at risk to connect by your deadline. The maximum deferral you can receive is 12 months. The DWP will provide more information on this process in the autumn.</p>
+
+      <h2 class="govuk-heading-m">
+        Schemes newly in scope
+      </h2>
+
+      <p>If you reach the 100 or more active and deferred member threshold at a scheme year end between 1 April 2021 and 31 March 2023, you will be required to connect by the later of:</p>
+        <ul>
+            <li>six months after the end of the scheme year in which that threshold was reached</li>
+            <li>the <a href="#">connection deadline</a>&nbsp;for schemes of your size and type as set out above</li>
+        </ul>
+        
+      <p>Case example</p>
+        <ul>
+            <li>Your scheme year ends on 31 March.</li>
+            <li>On 31 March 2021, you had 95 active and deferred members so you were not in scope of the regulations.</li>
+            <li>On 31 March 2022, you had 254 active and deferred members so your scheme came into scope of the regulations.</li>
+            <li>If you were to connect six months from 31 March 2022, your deadline would be 30 September 2022.</li>
+            <li>However, other schemes of your size have a deadline of 31 May 2025.</li>
+            <li>Therefore, your deadline is 31 May 2025.</li>
+        </ul>
+
+      <h2 class="govuk-heading-m">
+        Schemes in PPF assessment
+      </h2>
+
+      <p>Schemes in PPF assessment are not required to connect by their deadline. If the scheme then exits PPF assessment but does not enter the PPF, it will need to connect by the original deadline, or six months from the end of the assessment period, whichever comes last.</p>
+
+      <p>The above only applies where the whole scheme is in PPF assessment. If only a section of your scheme is in assessment, your connection duties still apply.</p>
 
       <h2 class="govuk-heading-m">
         Connection deadlines
@@ -420,6 +464,23 @@
             }
           ]
         ]
+      }) }}
+
+      <p>Schemes with 99 or fewer active and deferred members are not in scope of the draft regulations but they may be included in future legislation. They can apply to connect on a voluntary basis.</p>
+
+      <p>You will have a window of one month before your deadline in which to connect to the system (sometimes referred to as the ‘connection window’). If your scheme is one of the largest master trusts with a deadline of 30 August 2023 you will have a window of five months.</p>
+
+      {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+      {{ govukPagination({
+        previous: {
+          labelText: "1. Overview",
+          href: "#"
+        },
+        next: {
+          labelText: "3. Connecting to pensions dashboards",
+          href: "#"
+        }
       }) }}
 
     </div>
