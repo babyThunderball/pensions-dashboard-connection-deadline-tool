@@ -297,6 +297,11 @@ input {
   outline: 4px solid #fed100;
 }
 
+@media (min-width: 40.0625em) {
+  .govuk-error-summary {
+    margin-bottom: 36px;
+  }
+}
 .govuk-radios__label:before {
   border: 1px solid;
   border-color: #3d3d3d !important;
