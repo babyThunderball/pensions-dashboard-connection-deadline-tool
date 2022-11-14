@@ -293,6 +293,10 @@ input {
   box-shadow: 0 -2px #fed100, 0 4px #3d3d3d;
 }
 
+.govuk-error-summary:focus {
+  outline: 4px solid #fed100;
+}
+
 .govuk-radios__label:before {
   border: 1px solid;
   border-color: #3d3d3d !important;
