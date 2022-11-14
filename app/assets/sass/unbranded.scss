@@ -237,6 +237,11 @@ html {
   }
 }
 
+.govuk-error-message {
+  color: #a91717 !important;
+  font-weight: 600 !important;
+}
+
 #bott-mar {
   margin-bottom: 20px !important;
 }
@@ -256,9 +261,36 @@ input {
 
 .govuk-input--error {
   border-color: #a91717 !important;
+  border-width: 4px !important;
 }
 .govuk-input--error:focus {
   border-color: #3d3d3d !important;
+}
+
+.govuk-form-group--error {
+  border-left: 5px solid #a91717 !important;
+}
+
+.govuk-error-summary {
+  color: #3d3d3d !important;
+  border: 5px solid #a91717 !important;
+}
+
+.govuk-error-summary__list a:link, .govuk-error-summary__list a:visited {
+  color: #a91717;
+}
+
+.govuk-error-summary__list a:active {
+  color: #a91717 !important;
+}
+.govuk-error-summary__list a:hover {
+  color: #CD2e35;
+}
+
+.govuk-error-summary__list a:focus {
+  color: #3d3d3d !important;
+  background-color: #fed100;
+  box-shadow: 0 -2px #fed100, 0 4px #3d3d3d;
 }
 
 .govuk-radios__label:before {
