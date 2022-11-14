@@ -102,6 +102,8 @@
       
       <p>Use the <a href="#check-your-connection-deadline-radios-input-3">"Check your connection deadline" tool</a> or <a href="#connection-deadlines">view the connection deadlines for all scheme types</a>.</p>
 
+{# ==================== START Tool ====================== #}
+
       <section class="tool-container">
         <h2 id="check-your-connection-deadline-radios-input-3" class="govuk-heading-m">
           Check your connection deadline
@@ -170,10 +172,12 @@
             name: "membership-amount"
           }) }}
 
-
-          {{ govukButton({
-            text: "Get your deadline"
-          }) }}
+          <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Get your deadline"
+            }) }}
+            <a class="govuk-link" href="/v003-Radios-and-Input/check-your-connection-deadline-RADIOS-INPUT-Error-1#error-summary-title">DEMO ONLY: View ERROR state</a>
+          </div>
         </form>
       </section>
 
