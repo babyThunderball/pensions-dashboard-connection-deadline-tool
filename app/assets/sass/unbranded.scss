@@ -44,7 +44,7 @@ html {
   body, .govuk-body {
     color: #3d3d3d !important;
     font-family: 'Open Sans', sans-serif;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   
   h1 {
@@ -72,7 +72,8 @@ html {
     font-weight: 600 !important;
     letter-spacing: 0em !important;
     line-height: 28px !important;
-    padding-top: 20px !important;
+    margin-bottom: 12px;
+    /* padding-top: 20px !important; */
   }
   
   h4 {
@@ -126,6 +127,7 @@ html {
     font-weight: 400;
     letter-spacing: 0em !important;
     line-height: 1.5 !important;
+    margin-bottom: 16px !important;
   }
 
   .govuk-select {
@@ -142,6 +144,12 @@ html {
     margin-bottom: 30px !important;
     padding-bottom: .75em;
     width: 100%;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-m {
+    margin-bottom: 6px;
+  }
 }
 
 .govuk-panel__body {
@@ -184,6 +192,7 @@ html {
       margin-left: max(20px, calc(20px + env(safe-area-inset-left)));
     }
   }
+
   @media (min-width: 40.0625em) {
     .govuk-width-container {
       margin-right: 30px;
@@ -196,6 +205,7 @@ html {
       }
     }
   }
+
   @media (min-width: 1020px) {
     .govuk-width-container {
       margin-right: auto;
@@ -209,10 +219,59 @@ html {
     }
   }
 
+  @media (min-width: 40.0625em) {
+    .govuk-body {
+      margin-bottom: 24px;
+    }
+  }
+
   .tool-container {
     border: 4px solid #cacaca;
-    padding: 4.5% 5.5% 1.5% 5.5%;
-    margin-bottom: 36px;
+    padding: 4.5% 5.25% 1.5% 5.25%;
+    margin: 36px 0;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-s {
+    margin-bottom: 8px !important;
+  }
+}
+
+#bott-mar {
+  margin-bottom: 20px !important;
+}
+
+.intro-hint {
+  margin-bottom: 12px;
+}
+
+input {
+  border: 1px solid #3d3d3d !important;
+}
+
+.govuk-input:focus {
+  box-shadow: inset 0 0 0 2px #3d3d3d !important;
+  outline: 4px solid #fed100 !important;
+}
+
+.govuk-input--error {
+  border-color: #a91717 !important;
+}
+.govuk-input--error:focus {
+  border-color: #3d3d3d !important;
+}
+
+.govuk-radios__label:before {
+  border: 1px solid;
+  border-color: #3d3d3d !important;
+}
+
+.govuk-radios__label:after {
+  border: 10px solid #006EBC;
+}
+
+.govuk-radios__input:focus + .govuk-radios__label:before {
+  box-shadow: 0 0 0 4px #fed100 !important;
 }
   
   /* ================ END Global Styles ================ */
@@ -229,7 +288,7 @@ button, .govuk-button {
     font-size: 16px;
     font-weight: 600;
     padding: 13px 27px; /* padding: 5px 20px; */
-    margin: 30px 0px 30px 0px; /* margin: 0 auto; */
+    margin: 14px 0px 26px 0px; /* margin: 0 auto; */
     text-align: center;
     transition-duration: 0.2s;
     /* width: 200px; */
@@ -291,7 +350,7 @@ button, .govuk-button {
   /* ================ START Panel Styles ================ */
 
 .govuk-panel {
-    margin-bottom: 15px;
+    margin: 20px 0 24px 0;
     padding: 36px 10px;
     border: none;
 }
