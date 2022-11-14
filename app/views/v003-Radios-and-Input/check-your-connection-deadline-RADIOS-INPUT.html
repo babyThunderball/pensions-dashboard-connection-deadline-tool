@@ -90,7 +90,7 @@
       </p>
 
       <p class="govuk-body">
-        Your connection deadline is calculated based on the total number of active and deferred members across all sections of the scheme at the scheme year end that fell between 1 April 2020 and 31 March 2021. You should not include pensioner members in your count. If you did not have 100 or more active and deferred members at scheme year end 2020 to 2021, but you do now, see the section on ‘schemes newly in scope’ below.
+        Your connection deadline is calculated based on the total number of active and deferred members across all sections of the scheme at the scheme year end that fell between 1 April 2020 and 31 March 2021. You should not include pensioner members in your count. If you did not have 100 or more active and deferred members at scheme year end 2020 to 2021, but you do now, see the section on ‘schemes newly in scope’.
       </p>
 
       <p class="govuk-body">
@@ -99,7 +99,7 @@
 
       <p class="govuk-body">Your connection deadline will not change if your scheme changes size, unless you fall out of scope of the requirements entirely, for example if all your members become pensioner members.
       </p>     
-
+      
       <p>Use the <a href="#check-your-connection-deadline-radios-input-3">"Check your connection deadline" tool</a> or <a href="#connection-deadlines">view the connection deadlines for all scheme types</a>.</p>
 
       <section class="tool-container">
@@ -112,7 +112,7 @@
         </p> #}
 
         <p class="govuk-body">
-          If you have more than one type of scheme, you'll need to run this tool for each type.
+          If you have more than one type of scheme, you should check the deadline for each.
         </p>
 
         <form action="/v003-Radios-and-Input/your-connection-deadline-RADIOS-INPUT#your-connection-deadline-radios-input-3" method="post" novalidate>
@@ -127,21 +127,18 @@
               }
             },
             items: [
-              {
-                value: "master-trust",
-                text: "Master Trust"
-              },
+              
               {
                 value: "dc-scheme-used-for-automatic-enrolment",
-                text: "DC scheme used for automatic enrolment"
-              },
-              {
-                value: "cdc-scheme",
-                text: "CDC scheme"
+                text: "Defined contribution (DC) scheme used for automatic enrolment"
               },
               {
                 value: "db-other-dc-hybrid-schemes",
-                text: "DB schemes, all other DC schemes and all hybrid schemes (including hybrid master trusts and hybrid CDCs)"
+                text: "Defined benefit (DB) scheme, other DC scheme or hybrid scheme (including hybrid master trust or hybrid CDC)"
+              },
+              {
+                value: "master-trust",
+                text: "Master Trust"
               },
               {
                 value: "public-service-pension-scheme",
@@ -150,6 +147,10 @@
               {
                 value: "scheme-for-members-of-the-uk-or-welsh-parliaments",
                 text: "Scheme for members of the UK or Welsh Parliaments"
+              },
+              {
+                value: "cdc-scheme",
+                text: "Collective defined contribution (CDC) scheme"
               }
             ]
           }) }}
@@ -171,7 +172,7 @@
 
 
           {{ govukButton({
-            text: "Calculate connection deadline"
+            text: "Get your deadline"
           }) }}
         </form>
       </section>
@@ -525,6 +526,7 @@
       <p>Schemes with 99 or fewer active and deferred members are not in scope of the draft regulations but they may be included in future legislation. They can apply to connect on a voluntary basis.</p>
 
       <p>You will have a window of one month before your deadline in which to connect to the system (sometimes referred to as the ‘connection window’). If your scheme is one of the largest master trusts with a deadline of 30 August 2023 you will have a window of five months.</p>
+
 
       {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
