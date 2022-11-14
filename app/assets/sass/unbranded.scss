@@ -273,6 +273,12 @@ input {
 .govuk-radios__input:focus + .govuk-radios__label:before {
   box-shadow: 0 0 0 4px #fed100 !important;
 }
+
+.govuk-radios__input:checked + .govuk-radios__label::after {
+  opacity: 1;
+  outline: #3d3d3d solid 3px;
+  outline-offset: 6px;
+}
   
   /* ================ END Global Styles ================ */
 
