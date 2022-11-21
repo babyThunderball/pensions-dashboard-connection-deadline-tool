@@ -362,9 +362,10 @@ button, .govuk-button {
   button:focus,
   .govuk-button:active,
   .govuk-button:focus {
-    background-color: #fed100; /* Tangerine yellow */
-    color: #3d3d3d;/* Eclipse */
-    border-bottom: 2px solid #3d3d3d;
+    background-color: #fed100 !important; /* Tangerine yellow */
+    color: #3d3d3d !important;/* Eclipse */
+    box-shadow: 0 2px 0 #3d3d3d !important;
+    // border-bottom: 2px solid #3d3d3d;
   }
   
   button.secondary-btn {
@@ -394,9 +395,10 @@ button, .govuk-button {
     text-decoration-thickness: 3px;
   }
   
-  a:focus {
+  a:focus, .govuk-link:focus {
     background-color: #fed100; /* Tangerine yellow */
-    border-bottom: 4px solid #3d3d3d;
+    box-shadow: 0 -2px #fed100, 0 4px #3d3d3d;
+    // border-bottom: 4px solid #3d3d3d;
     color: #3d3d3d !important; /* Eclipse */
     text-decoration: none !important;
   }
