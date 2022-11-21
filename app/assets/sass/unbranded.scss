@@ -407,6 +407,10 @@ button, .govuk-button {
     color: #483b8b; /* Violet */
   }
 
+  .pageanchornavigation__list li, .guidenavigation li {
+    line-height: 1.75 !important;
+  }
+
   /* ================ END Link Styles ================ */
 
   /* ================ START Panel Styles ================ */
