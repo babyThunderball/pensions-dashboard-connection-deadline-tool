@@ -576,3 +576,20 @@ button, .govuk-button {
   }
 
   /* ================ END Back to Top Styles ================ */
+
+  /* ================ START Form Input Styles ================ */
+
+  .govuk-input {
+    color: #3d3d3d;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+/*   @media (min-width: 40.0625em) {
+    .govuk-input {
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  } */
