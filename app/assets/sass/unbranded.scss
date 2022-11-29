@@ -258,6 +258,12 @@ input {
   padding: 0 10px 0 0 !important;
 }
 
+@media only screen and (max-width: 360px) {
+  .govuk-grid-column-two-thirds {
+    padding: 0 !important;
+  }
+}
+
 .govuk-grid-column-one-third {
   margin-top: 6px;
   padding: 0 0 0 20px !important;
@@ -348,6 +354,7 @@ button, .govuk-button {
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
+    line-height: 1.5;
     padding: 13px 27px; /* padding: 5px 20px; */
     margin: 14px 0px 26px 0px; /* margin: 0 auto; */
     text-align: center;
@@ -424,6 +431,29 @@ button, .govuk-button {
 
 .govuk-panel--confirmation {
     background: #1E7E34 !important;
+}
+
+@media only screen and (max-width: 360px) {
+  .govuk-panel__body {
+    font-size: 26px !important;
+    line-height: 40px !important;
+    // margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .govuk-panel__title {
+    font-size: 23px !important;
+    line-height: 36px !important;
+    // margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .govuk-panel--confirmation {
+    padding: 24px 32px 16px 32px !important;
+    min-height: 200px;
+  }
 }
 
   /* ================ END Panel Styles ================ */
