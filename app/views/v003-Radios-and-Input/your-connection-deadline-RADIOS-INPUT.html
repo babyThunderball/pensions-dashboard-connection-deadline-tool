@@ -107,12 +107,19 @@
           Check your connection deadline
         </h2>
 
-        {% from "govuk/components/panel/macro.njk" import govukPanel %}
+        <div class="govuk-panel govuk-panel--confirmation">
+          <p class="govuk-panel__title">Based on this, your connection deadline is
+          </p>
+          <div class="govuk-panel__body">31 October 2023
+          </div>
+        </div>
+
+        {# {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
         {{ govukPanel({
-          titleText: "Based on this, your connection deadline is",
+          titleHtml: "Based on this, your connection deadline is",
           html: "31 October 2023"
-        }) }}
+        }) }} #}
 
         <form action="/v003-Radios-and-Input/check-your-connection-deadline-RADIOS-INPUT#check-your-connection-deadline-radios-input-3" method="post" novalidate>
 
